@@ -23,14 +23,14 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'index' => 'required|unique:students|min:4',
+            'id' => 'required|unique:students|min:4',
             'name' => 'required',
             'email' => 'required',
             'course' => 'required'
         ]);
 
         $student = new Student();
-        $student->index = $request->input('index');
+        $student->id = $request->input('id');
         $student->name = $request->input('name');
         $student->email = $request->input('email');
         $student->course = $request->input('course');

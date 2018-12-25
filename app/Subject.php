@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Subject extends Model
 {
     protected $table = 'subjects';
-    public $primarykey = 'module';
+    public $primarykey = 'id';
     public $timestamps = true;
 
-    public function students()
+    public function student()
     {
         return $this->belongsTo('App\Student');
     }

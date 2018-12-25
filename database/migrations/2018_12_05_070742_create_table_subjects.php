@@ -14,11 +14,11 @@ class CreateTableSubjects extends Migration
     public function up()
     {
         Schema::create('subjects', function (Blueprint $table) {
-            $table->integer('module');
-            $table->integer('student_index');
-            $table->foreign('student_index')->unsigned()->references('index')->on('students')->onDelete('cascade');
+            $table->integer('id');
+            $table->integer('student_id');
+            $table->foreign('student_id')->unsigned()->references('id')->on('students')->onDelete('cascade');
             $table->text('subject_name');
-            $table->primary(array('module', 'student_index'));
+            $table->primary(array('id', 'student_id'));
             $table->timestamps();
         });
     }

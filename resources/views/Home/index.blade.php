@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h3>Student Information List</h3>
         @if(count($students) > 0)
-            <table class="table mt-2">
+            <table class="table mt-2 table-hover">
                 <thead>
                     <tr>
                         <th>Index</th>
@@ -18,12 +18,12 @@
                 <tbody>
                     @foreach($students as $student)
                         <tr>
-                            <td>{{$student->index}}</td>
-                            <td>{{$student->name}}</td>
-                            <td>{{$student->email}}</td>
-                            <td>{{$student->course}}</td>
-                            <td>{{$student->done}}</td>
-                            <td></td>
+                            <td>{{ $student->id }}</td>
+                            <td>{{ $student->name }}</td>
+                            <td>{{ $student->email }}</td>
+                            <td>{{ $student->course }}</td>
+                            <td>{{ $student->done }}</td>
+                            <td><a class="btn btn-link" href="/home/{{$student->id}}/show">View Subjects</a></td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -21,14 +21,14 @@ class SubjectController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'module' => 'required|unique:subjects|min:3',
-            'student_index' => 'required|min:4',
+            'id' => 'required|unique:subjects|min:3',
+            'student_id' => 'required|min:4',
             'subject_name' => 'required'
         ]);
     
         $subject = new Subject();
-        $subject->module = $request->input('module');
-        $subject->student_index = $request->input('student_index');
+        $subject->id = $request->input('id');
+        $subject->student_id = $request->input('student_id');
         $subject->subject_name = $request->input('subject_name');
         $subject->save();
         return redirect('/')->with('success', 'Subject inserted');

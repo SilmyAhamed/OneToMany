@@ -8,13 +8,13 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Module</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" name="module"  placeholder="Module">
+                    <input type="number" class="form-control" name="id"  placeholder="Module">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Index</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" name="student_index"  placeholder="Index">
+                    <input type="number" class="form-control" name="student_id"  placeholder="Index">
                 </div>
             </div>
             <div class="form-group row">
