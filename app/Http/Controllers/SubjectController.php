@@ -22,7 +22,7 @@ class SubjectController extends Controller
     {
         $this->validate($request,[
             'id' => 'required|unique:subjects|min:3',
-            'student_id' => 'required|min:4',
+            'student_id' => 'required|min:4|exists:students,id',
             'subject_name' => 'required'
         ]);
     
